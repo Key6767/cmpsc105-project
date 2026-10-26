@@ -16,7 +16,7 @@ Afterwards, the data set was clean with a reduced ammount of missing values.
 
 From initial analysis, it seems that most kickstarters failed (168221 failed and 113081 were successful). Which is shown through this barplot depicting the success, failure, and canceled rates:
 
-![alt text](../../Graphs/successrates.png) 
+![Kickstarter Campaign Success Rates](https://raw.githubusercontent.com/Key6767/cmpsc105-project/25683da2c899bf9657365e890985cdb54c966eea/Main%20Analysis/Graphs/successrates.png)
 
 It is also not unusual for kickstarters to be canceled (32354 canceled), the question is about the percentage of cancelation. 
 
@@ -67,7 +67,7 @@ These outliers are inflating the variance 166.18, and standard deviation 12.89.
 ---
 ### 2. Successes and failures 
 
-![alt text](../../Graphs/piechart_cs_percentages.png)
+![Pie Chart](https://raw.githubusercontent.com/Key6767/cmpsc105-project/25683da2c899bf9657365e890985cdb54c966eea/Main%20Analysis/Graphs/piechart_cs_percentages.png)
 
 **Break Down:**
 - 51.96 percent of the campaigns failed
@@ -79,7 +79,7 @@ These outliers are inflating the variance 166.18, and standard deviation 12.89.
 
 The Following is a bar graph comparing Kickstarter success rates across different campaign durations:
 
-![](../../Graphs/Kickstarter_CampaignLengthBar.png)
+![Campaign Length Bar](https://raw.githubusercontent.com/Key6767/cmpsc105-project/25683da2c899bf9657365e890985cdb54c966eea/Main%20Analysis/Graphs/Kickstarter_CampaignLengthBar.png)
 
 What is demonstrates: 
 
@@ -101,7 +101,7 @@ However, this is an initial observation and does not prove that shorter campaign
 
 ### 3. Kickstarter Success Rate by Funding Goal:
 
-![alt text](../../Graphs/KickbyFundBar.png)
+![Kickstarter Funding](https://raw.githubusercontent.com/Key6767/cmpsc105-project/25683da2c899bf9657365e890985cdb54c966eea/Main%20Analysis/Graphs/KickbyFundBar.png)
 
 This bar graph shows a trend of Kickstarter success rates decreasing as funding goals increase.
 
@@ -115,7 +115,7 @@ These results do not prove that lower goals directly cause success, because othe
 
 Converted to U.S. Dollar, this is what Kikstarter Success Rates and Average Funding Goal by Country reveals about our data. 
 
-![alt text](../../Graphs/RevealingSuccessbyCountry+Funds.png)
+![Success by Country and Funds](https://raw.githubusercontent.com/Key6767/cmpsc105-project/25683da2c899bf9657365e890985cdb54c966eea/Main%20Analysis/Graphs/RevealingSuccessbyCountry%2BFunds.png)
 
 Moreover, this plot accounts for the disparity between the results shown in the Kickstarter Success Rate by Funding Goal plot, and the Correlation coefficient between funding goal and success: $$r=-0.0253$$
 
@@ -125,9 +125,9 @@ Additionally, we can note that the U.S. has a higher success rate, and one of th
 
 ### 5. A Possible Bimodal distribution between Launch months and Success Rate measures:
 
-![alt text](../../Graphs/Launchmonthsbar.png)
+![Launch by Month](https://raw.githubusercontent.com/Key6767/cmpsc105-project/25683da2c899bf9657365e890985cdb54c966eea/Main%20Analysis/Graphs/Launchmonthsbar.png)
 
-This graph compares Kickstarter success rates across the twelve launch months.
+This graph compares Kickstarter success rates across twelve launch months.
 
 -  March has the highest success rate at 42.51%, followed closely by April at 42.32%. 
 - July has the lowest success rate at 36.00%.
