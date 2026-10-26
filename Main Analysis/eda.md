@@ -105,11 +105,23 @@ This bar graph shows a trend of Kickstarter success rates decreasing as funding 
 
 - Projects with goals between $1 and $1,000 have the highest success rate, at 52.84%, while projects with goals above $100,000 have the lowest rate, at 8.07%. 
 
-It is important to recognize that this observation is closed off to kickstarter campaigns ran with U.S. Dollars, and excludes other international currencies.
+It is important to recognize that this observation is closed off to kickstarter campaigns ran with U.S. Dollars, and excludes other international currencies. 
 
 These results do not prove that lower goals directly cause success, because other factors, such as project category, campaign length, and audience interest, may also affect the outcome.
 
-### 4. A Possible Bimodal distribution between Launch months and Success Rate measures:
+### 4. Kickstarter Success Rate and Average Funding Goal by Country:
+
+Converted to U.S. Dollar, this is what Kikstarter Success Rates and Average Funding Goal by Country reveals about our data. 
+
+![alt text](../../Graphs/RevealingSuccessbyCountry+Funds.png)
+
+Moreover, this plot accounts for the disparity between the results shown in the Kickstarter Success Rate by Funding Goal plot, and the Correlation coefficient between funding goal and success: $$r=-0.0253$$
+
+Which indicates an extremely weak negative correlation between funding goal and success rates. 
+
+Additionally, we can note that the U.S. has a higher success rate, and one of the lowest funding goals. Yet, we have sweden as the highest funding goals, yet placed around the medium range of between success and failure rate. Which may explain the weak negative correlation coefficient result. 
+
+### 5. A Possible Bimodal distribution between Launch months and Success Rate measures:
 
 ![alt text](../../Graphs/Launchmonthsbar.png)
 
@@ -150,4 +162,10 @@ Once we understand more about the data set, what causal claims are we able to ma
 
 ## Conclusion:
 
-Overall, our initial exploratory data analysis reveals several patterns in Kickstarter campaign outcomes, durations, funding goals, and launch timing. Most notably, approximately 52% of recorded campaigns failed, while about 35% were successful. Our findings also suggest that shorter campaigns tend to have higher success rates, with campaigns lasting 8–21 days performing better than those lasting 46–60 days. Similarly, campaigns with lower funding goals generally exhibited higher success rates, whereas success rates varied only moderately across launch months. However, these relationships should be interpreted cautiously: correlation does not establish causation, and other factors, including project category, audience interest, and campaign characteristics, may influence the outcomes. Our analysis also revealed unusually extreme values in campaign durations and funding goals, as well as data quality issues that required cleaning and further consideration. These limitations raise important questions about how missing values, outliers, and differences between project categories affect our results. Therefore, our next stage of analysis will investigate these relationships in greater detail, examine the influence of outliers and missing data, and determine whether the patterns identified in this initial exploration remain consistent across different categories of projects. Ultimately, this investigation will help us develop a more reliable understanding of the factors associated with Kickstarter campaign success while distinguishing meaningful statistical relationships from conclusions that the data cannot yet support.
+Overall, our initial exploratory data analysis reveals several patterns in Kickstarter campaign outcomes and their relationships with campaign duration, funding goals, geographical location, and launch timing. Of the campaigns analyzed, approximately 51.96% failed, while 34.92% were successful, suggesting that failure was more common than success within this dataset. Our analysis also identified a relatively concentrated distribution of campaign durations, with the middle 50% lasting approximately 30 to 37 days, alongside extreme values that may influence our statistical summaries.
+
+One of our most notable findings concerns campaign duration. Campaigns lasting between 8 and 21 days had success rates of approximately 53%, compared with approximately 28% for campaigns lasting 46 to 60 days. The reported correlation coefficient of -0.716 suggests a strong negative relationship between campaign duration and success rate in our analysis. Funding goals also appeared to be associated with campaign outcomes: projects with lower goals generally exhibited higher success rates, while projects with goals exceeding $100,000 had substantially lower success rates. However, the correlation coefficient of -0.0253 indicates an extremely weak negative linear relationship between funding goal and success rate in the analysis where it was calculated. This difference highlights the importance of examining how variables are measured and grouped before drawing conclusions. Our geographical analysis also revealed variation between countries in success rates and average funding goals, while launch-month success rates showed comparatively modest differences, ranging from 36.00% in July to 42.51% in March.
+
+Despite these findings, our analysis remains exploratory, and the observed relationships do not establish causation. Differences in project categories, audience interest, currency, funding expectations, and other campaign characteristics may help explain the patterns we observed. Furthermore, the data-cleaning process, missing values, and extreme observations introduce additional considerations that may affect the reliability and interpretation of our results. These limitations motivate several directions for further investigation: comparing success rates across project categories, examining how outliers and missing values influence our findings, and investigating whether the relationships between campaign characteristics and success remain consistent across different groups. We should also examine how the definitions and calculations of our correlation coefficients affect their interpretation, particularly when comparing categorical outcomes with numerical variables.
+
+Ultimately, this initial analysis provides a foundation for a more detailed investigation into the characteristics associated with Kickstarter campaign success and the limitations of predicting outcomes from individual variables alone.
