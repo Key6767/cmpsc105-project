@@ -3,6 +3,8 @@
 
 ## Initial Overview:
 
+> The unit of observation is an individual Kickstarter campaign. Each row represents one campaign, while the columns contain ?>information about its characteristics, including its funding goal, amount pledged, number of backers, country, launch date, deadline, and final status.
+
 The data set contained many NaN values (missing values), and the column names where integers instead of their actual column names which where found just below. We believe this is a data downloading quality issue, however we resolved it by 
 
 1. Dropping the missing values
