@@ -14,7 +14,9 @@ The variance is also substantially higher among failed campaigns, indicating muc
 
 The pledged amount percentiles show that successful Games campaigns generally raise relatively modest amounts. The 25th percentile is $4,053.56, the median is $11,236.77, and the 75th percentile is $32,921. This means that 75% of successful campaigns raised $32,921 or less.
 
-Out of the 7,445 successful campaigns, only 1,331 raised at least $50,000. This represents approximately 17.88% of successful campaigns, meaning that 82.12% did not reach the manufacturer's minimum production requirement.
+Out of the 7,445 successful campaigns, only 1,331 raised at least $50,000. This represents approximately 17.88% of successful campaigns, meaning that 82.12% did not reach the manufacturer's minimum production requirement as illustrated by the following graph:
+
+![CampaignSuccessFigs](https://raw.githubusercontent.com/Key6767/cmpsc105-project/9fae798b07e5b7887b3185671d09d2c27e94b0d8/Main%20Analysis/Graphs/Successful_Campaigns.png)
 
 These findings suggest that a successful Kickstarter campaign does not necessarily generate enough funding to support large-scale production. The manufacturer should therefore be realistic about the amount most independent projects can raise and should not assume that reaching a funding goal automatically means having sufficient funds to begin production.
 
@@ -63,7 +65,9 @@ Moreover, 7 rows where ommitted due to malformed data.
 
 Given our hypothesis test: We reject the null hypothesis.
 
-Number of simulations:5,0000
+![5ksims](https://raw.githubusercontent.com/Key6767/cmpsc105-project/9fae798b07e5b7887b3185671d09d2c27e94b0d8/Main%20Analysis/Graphs/RandDistofFundingDifferences.png)
+
+* Number of simulations:5,0000
 
 $$\alpha=0.05\:$$
 
@@ -73,6 +77,8 @@ However, Kickstarter funding amounts are likely highly skewed: a relatively smal
 
 Because of this, a second test with a higher number of simulations was conducted. The following are the results:
 
+![20ksims](https://raw.githubusercontent.com/Key6767/cmpsc105-project/9fae798b07e5b7887b3185671d09d2c27e94b0d8/Main%20Analysis/Graphs/RandomizationDistribution20ksims.png)
+
 * Number of simulations: 20000
 * Observed difference: 1512.33
 * Simulations as extreme or more extreme: 0
@@ -80,6 +86,8 @@ Because of this, a second test with a higher number of simulations was conducted
 $$P= 0.00004999750012499375$$
 
 ### C: Statistical and Comparison Summary
+
+![compstats](https://raw.githubusercontent.com/Key6767/cmpsc105-project/9fae798b07e5b7887b3185671d09d2c27e94b0d8/Main%20Analysis/Graphs/Comparativefundingstats.png)
 
 | Statistic | Short campaigns (≤30 days) | Long campaigns (45–60 days) |
 |-----------|----------------------------|-----------------------------|
@@ -110,6 +118,8 @@ For this investigation, all 323,118 campaigns with numerical goal values where u
 
 632 rows where removed because they held unusable values.
 
+![FundingGoalvPledged](https://raw.githubusercontent.com/Key6767/cmpsc105-project/9fae798b07e5b7887b3185671d09d2c27e94b0d8/Main%20Analysis/Graphs/FundingGoalvPledged_.png)
+
 - Sample covariance: $$694,333,865.36$$
 - Pearson correlation: $$r = 0.0068$$
 
@@ -117,12 +127,20 @@ As seen above, we can determine that the covarience was positive, however its qu
 
 ### B: Successful vs. failed campaigns
 
+### Successful Campaigns Data
+
+![FundingvPledgedSuccessful](https://raw.githubusercontent.com/Key6767/cmpsc105-project/9fae798b07e5b7887b3185671d09d2c27e94b0d8/Main%20Analysis/Graphs/Fundingv.Pledged_Successful.png)
+
+### Failed Campaigns Data
+
+![FundingGoalvPledgedFailed](https://raw.githubusercontent.com/Key6767/cmpsc105-project/9fae798b07e5b7887b3185671d09d2c27e94b0d8/Main%20Analysis/Graphs/FundingGoalvPledged_Failed.png)
+
 | Outcome | Campaigns | Correlation (r) |
 | --- | ---: | ---: |
 | Successful | 113,081 | 0.5125 |
 | Failed | 168,221 | 0.0227 |
 
-Successful campaigns have a moderate positive relationship: larger goals tend to correspond with larger pledged amounts. For failed campaigns, the correlation is almost zero. Consequently, the linear relationship breaks down.
+As seen in the above visualizations, successful campaigns have a moderate positive relationship: larger goals tend to correspond with larger pledged amounts. For failed campaigns, the correlation is almost zero. Consequently, the linear relationship breaks down.
 
 The manufacturer is advised to communicate with kickstarter designers to set reliable goals based on the funding needed in order to produce the product. 
 
@@ -132,8 +150,33 @@ An artificially high goal, aiming a facade of ambition is not supported by the d
 These calculations use the requested original `goal` and `pledged` columns, which mix currencies. Outliers can also affect the results. The graphs use symlog axes for readability, but the correlations use the original values. These are associations, not proof of causality.
 
 
-## Overall Summary of Investigations
+## Overall Summary of Investigations + Further Questions
+
+### Summary
 
 Across all three investigations, the findings highlight the importance of realistic crowdfunding expectations. **Investigation 1** showed that failed campaigns generally had higher funding goals, while most successful campaigns raised less than $50,000. **Investigation 2** found that longer campaigns had higher average pledges, but lower median funding, suggesting that exceptionally successful projects influenced the results. **Investigation 3** revealed almost no overall correlation between funding goals and pledged amounts.
 
 Ultimately, founders should avoid relying on exceptional Kickstarter successes when setting funding targets. Instead, they should consider typical campaign outcomes, realistic production costs, and the limitations of campaign duration when making financial decisions.
+
+### Proposed Original Investigations
+
+#### 1. The Influence of Exceptional Campaigns
+**Research Question:** How much do the top 1% of Kickstarter campaigns influence overall funding trends?
+
+**Why it matters:** Exceptionally successful campaigns may distort averages and create unrealistic expectations for new creators.
+
+**Analytical Strategy:** Identify the top 1% of campaigns by pledged funding and compare means, medians, and funding distributions before and after temporarily excluding them. Examine whether these patterns differ across categories.
+
+#### 2. Campaign Duration and Funding Ambitions
+**Research Question:** Are longer campaigns more beneficial for creators pursuing ambitious funding goals?
+
+**Why it matters:** Although longer campaigns had higher average pledges in our initial investigation, it remains unclear whether additional campaign time is particularly beneficial for projects seeking larger amounts.
+
+**Analytical Strategy:** Group campaigns by duration and funding-goal ranges. Compare average and median pledged amounts and success rates across these groups to investigate whether duration has different associations with funding outcomes at different goal levels.
+
+#### 3. Identifying Realistic Funding Goals
+**Research Question:** Is there an ideal funding-goal range for each Kickstarter category?
+
+**Why it matters:** Setting a goal too high may make it more difficult for creators to reach their targets, while setting it too low may leave insufficient funding for production.
+
+**Analytical Strategy:** Group campaigns by category and funding-goal ranges. Compare success rates, pledged amounts, and goal distributions to identify funding ranges associated with higher success rates in each category.
